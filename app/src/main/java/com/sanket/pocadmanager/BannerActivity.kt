@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.RequestConfiguration
@@ -26,13 +27,10 @@ class BannerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_banner)
 
-        /*val configuration = RequestConfiguration.Builder()
-            .setTestDeviceIds(listOf("C5857832AAAD591F553A517D4C45CCC9")).build()
+        rvBanners.apply {
+            layoutManager = LinearLayoutManager(this@BannerActivity)
+            adapter = BannersAdapter()
+        }
 
-        MobileAds.setRequestConfiguration(configuration)
-
-        Log.d(TAG, "onCreate: " + AdRequest.Builder().build().isTestDevice(this))*/
-
-        publisherAdView.loadAd(PublisherAdRequest.Builder().addTestDevice("C5857832AAAD591F553A517D4C45CCC9").build())
     }
 }
