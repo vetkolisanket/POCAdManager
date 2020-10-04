@@ -16,5 +16,6 @@ class MainActivity : AppCompatActivity() {
         btnAdMob.setOnClickListener { startActivity(AdMobActivity.newIntent(this)) }
         btnAdMobInterstitial.setOnClickListener { startActivity(AdMobInterstitialActivity.newIntent(this)) }
         btnBanner.setOnClickListener { startActivity(BannerActivity.newIntent(this)) }
+        btnInterstitial.setOnClickListener { startActivity(InterstitialActivity.newIntent(this)) }
     }
 }
