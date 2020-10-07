@@ -40,6 +40,14 @@
             android:text="Interstitial"
             />
 
+        <Button
+            android:id="@+id/btnNative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Native"
+            android:visibility="gone"
+            />
+
     </LinearLayout>
 
 </ScrollView>
